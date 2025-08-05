@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+div {
+    background-color: rgb(3, 106, 119);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-shadow: 2px 2px 2px black;
+}
+
+ul {
+    margin: 5%
+}
+li {
+    margin: 3%
+}
+
+input {
+    border-radius: 5px;
+    box-shadow: 2px 4px 15px;
+}
+
+button {
+    border-radius: 5px;
+    box-shadow: 2px 4px 15px;
+}
