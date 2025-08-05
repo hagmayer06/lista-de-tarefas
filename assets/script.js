@@ -8,15 +8,30 @@ function add() {
   input.value = "";
   render();
 }
+//função apagar tarefa
+function apagar(index) {
+  tarefas.splice(index, 1);
+  render()
+}
 //mostrar na tela
 function render() {
   const ul = document.querySelector("ul");
   ul.innerHTML = null;
-  tarefas.forEach(function (tarefa) {
+  tarefas.forEach(function (tarefa, index) {
     const li = document.createElement("li");
     li.innerText = tarefa;
+     
+    //criando botão de apagar
+    const botao = document.createElement("button");
+    botao.id = "apagar"
+    botao.innerHTML = '<img src="lixeira.png" width="15" height="15"/>' ;
+    botao.onclick = () => apagar(index);
+    li.appendChild(botao);
+    
     ul.appendChild(li);
   });
 }
+
+
 //iniciar
 render();

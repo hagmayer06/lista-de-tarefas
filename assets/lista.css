@@ -20,13 +20,20 @@ div {
 
 h1 {
     text-shadow: 2px 2px 2px black;
+    text-align: center;
 }
 
 ul {
-    margin: 5%
+    margin: 5%;
+    padding-left: 0;
+    width: 100%;
 }
 li {
-    margin: 3%
+    margin: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
 }
 
 input {
@@ -37,4 +44,9 @@ input {
 button {
     border-radius: 5px;
     box-shadow: 2px 4px 15px;
+}
+
+button#apagar {
+    margin-left: 15px;
+    margin: 1px 10px;
 }
