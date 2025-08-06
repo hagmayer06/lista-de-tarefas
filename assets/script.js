@@ -1,5 +1,6 @@
 //estado da aplicação//
 const tarefas = ["1 tarefa", "2 tarefa", "3 tarefa"];
+
 //alteradore de estado
 function add() {
   const input = document.querySelector("input");
@@ -19,7 +20,14 @@ function render() {
   ul.innerHTML = null;
   tarefas.forEach(function (tarefa, index) {
     const li = document.createElement("li");
-    li.innerText = tarefa;
+    li.innerText = tarefa;    
+
+
+
+    //criando checkbox
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    li.appendChild(checkbox);
      
     //criando botão de apagar
     const botao = document.createElement("button");
