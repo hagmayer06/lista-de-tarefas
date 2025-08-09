@@ -29,10 +29,10 @@ ul {
     width: 100%;
 }
 li {
-    margin: 3px 5px;
-    display: flex;    
+    margin: 3px 50px 5px 5px;
+    display: flex;
     align-items: center;
-    text-align: left;
+    justify-content: space-between; /* afasta o texto das ações */
 }
 
 
@@ -40,6 +40,7 @@ li {
 input {
     border-radius: 5px;
     box-shadow: 2px 4px 15px;
+    margin: 3px 05px 3px 20px;
 }
 
 button {
@@ -47,11 +48,26 @@ button {
     box-shadow: 2px 4px 15px;
 }
 
-button#apagar {
-   
-    margin: 3px 20px 3px 115px;
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 2px; /* cola o checkbox e o botão */
+  margin-left: 72px;
 }
 
-#checkbox {
-    margin: 3px 100px 3px 10px;
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #19dd43; /* muda a cor do check em navegadores modernos */
+  cursor: pointer;
+  margin: 0px;
 }
+
+.editar-input {
+  width: 120px;
+  font-size: 14px;
+  padding: 2px 6px 2px 28px; /* espaço à esquerda para a imagem */
+  
+}
+
