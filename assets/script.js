@@ -5,10 +5,9 @@ const tarefas = ["1 tarefa", "2 tarefa", "3 tarefa"];
 function add() {
   const input = document.querySelector("#input-add");
   const tarefa = input.value;
-  tarefas.push(tarefa); 
+  tarefas.push(tarefa);
   input.value = "";
   render();
- 
 }
 //função apagar tarefa
 function apagar(index) {
@@ -32,24 +31,21 @@ function render() {
     checkbox.type = "checkbox";
     actions.appendChild(checkbox);
 
-    
     // Botão apagar
     const botao = document.createElement("button");
     botao.id = "apagar";
     botao.innerHTML = '<img src="lixeira.png" width="15" height="15"/>';
     botao.onclick = () => apagar(index);
     actions.appendChild(botao);
-    
-    
+
     // Botão editar
     const editar = document.createElement("button");
     editar.innerHTML = '<img src="caneta.png" width="15" height="15"/>'; // Use um ícone ou texto
     editar.onclick = () => editarTarefa(index, li, tarefa);
     actions.appendChild(editar);
 
-
     // Adiciona o container ao li
-    li.innerText = tarefa;
+
     li.appendChild(actions);
 
     ul.appendChild(li);
@@ -62,9 +58,9 @@ function editarTarefa(index, li, tarefaAntiga) {
   input.type = "text";
   input.value = tarefaAntiga;
   input.className = "editar-input";
-  input.placeholder = "ola"; // texto que aparece dentro do input
+  input.placeholder = "edição de tarefa"; // texto que aparece dentro do input
   input.onblur = salvar;
-  input.onkeydown = function(e) {
+  input.onkeydown = function (e) {
     if (e.key === "Enter") salvar();
   };
   li.innerText = ""; // Limpa o li
